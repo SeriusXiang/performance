@@ -17,6 +17,8 @@
 		9E5921C9277A9C7F0081DEEE /* performanceSample_XYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921C8277A9C7F0081DEEE /* performanceSample_XYTests.m */; };
 		9E5921D3277A9C7F0081DEEE /* performanceSample_XYUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921D2277A9C7F0081DEEE /* performanceSample_XYUITests.m */; };
 		9E5921D5277A9C7F0081DEEE /* performanceSample_XYUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921D4277A9C7F0081DEEE /* performanceSample_XYUITestsLaunchTests.m */; };
+		9E5921E7277B0A130081DEEE /* TestCADisplayLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921E5277B0A130081DEEE /* TestCADisplayLinkViewController.m */; };
+		9E5921E8277B0A130081DEEE /* TestCADisplayLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5921E6277B0A130081DEEE /* TestCADisplayLinkViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		9E5921CE277A9C7F0081DEEE /* performanceSample_XYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = performanceSample_XYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5921D2277A9C7F0081DEEE /* performanceSample_XYUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = performanceSample_XYUITests.m; sourceTree = "<group>"; };
 		9E5921D4277A9C7F0081DEEE /* performanceSample_XYUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = performanceSample_XYUITestsLaunchTests.m; sourceTree = "<group>"; };
+		9E5921E4277B0A130081DEEE /* TestCADisplayLinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCADisplayLinkViewController.h; sourceTree = "<group>"; };
+		9E5921E5277B0A130081DEEE /* TestCADisplayLinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCADisplayLinkViewController.m; sourceTree = "<group>"; };
+		9E5921E6277B0A130081DEEE /* TestCADisplayLinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCADisplayLinkViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 		9E5921AB277A9C7A0081DEEE /* performanceSample_XY */ = {
 			isa = PBXGroup;
 			children = (
+				9E5921E2277B09C30081DEEE /* View */,
 				9E5921AC277A9C7A0081DEEE /* AppDelegate.h */,
 				9E5921AD277A9C7B0081DEEE /* AppDelegate.m */,
 				9E5921AF277A9C7B0081DEEE /* SceneDelegate.h */,
@@ -134,6 +140,24 @@
 				9E5921D4277A9C7F0081DEEE /* performanceSample_XYUITestsLaunchTests.m */,
 			);
 			path = performanceSample_XYUITests;
+			sourceTree = "<group>";
+		};
+		9E5921E2277B09C30081DEEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E5921E3277B09D50081DEEE /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E5921E3277B09D50081DEEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E5921E4277B0A130081DEEE /* TestCADisplayLinkViewController.h */,
+				9E5921E5277B0A130081DEEE /* TestCADisplayLinkViewController.m */,
+				9E5921E6277B0A130081DEEE /* TestCADisplayLinkViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +266,7 @@
 				9E5921BC277A9C7F0081DEEE /* LaunchScreen.storyboard in Resources */,
 				9E5921B9277A9C7F0081DEEE /* Assets.xcassets in Resources */,
 				9E5921B7277A9C7B0081DEEE /* Main.storyboard in Resources */,
+				9E5921E8277B0A130081DEEE /* TestCADisplayLinkViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5921E7277B0A130081DEEE /* TestCADisplayLinkViewController.m in Sources */,
 				9E5921B4277A9C7B0081DEEE /* ViewController.m in Sources */,
 				9E5921AE277A9C7B0081DEEE /* AppDelegate.m in Sources */,
 				9E5921BF277A9C7F0081DEEE /* main.m in Sources */,
