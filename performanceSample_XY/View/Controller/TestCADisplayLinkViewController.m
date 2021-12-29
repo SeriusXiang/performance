@@ -39,8 +39,9 @@
     NSLog(@"_______timestamp = %lf", self.link.timestamp);
     NSLog(@"_______targetTimestamp = %lf", self.link.targetTimestamp);
     NSLog(@"_______preferredFramesPerSecond = %ld", self.link.preferredFramesPerSecond);
-    NSLog(@"_______FPS = %lf", self.link.targetTimestamp-self.link.timestamp);
-    self.testView1.transform = CGAffineTransformRotate(self.testView1.transform, M_PI / 240);
+    NSLog(@"_______间隔时间 = %lf", self.link.targetTimestamp-self.link.timestamp);
+    NSLog(@"_______FPS = %lf", 1/(self.link.targetTimestamp-self.link.timestamp));
+//    self.testView1.transform = CGAffineTransformRotate(self.testView1.transform, M_PI / 240);
 }
 
 - (void)startAnimation
