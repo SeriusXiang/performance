@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0D0C68277C4B00002F94A1 /* tableShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C67277C4B00002F94A1 /* tableShowModel.m */; };
+		9E0D0C6B277C4B0C002F94A1 /* tableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C6A277C4B0C002F94A1 /* tableViewModel.m */; };
+		9E0D0C6F277C581D002F94A1 /* BlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C6D277C581D002F94A1 /* BlendViewController.m */; };
+		9E0D0C70277C581D002F94A1 /* BlendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D0C6E277C581D002F94A1 /* BlendViewController.xib */; };
 		9E5921AE277A9C7B0081DEEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921AD277A9C7B0081DEEE /* AppDelegate.m */; };
 		9E5921B1277A9C7B0081DEEE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921B0277A9C7B0081DEEE /* SceneDelegate.m */; };
 		9E5921B4277A9C7B0081DEEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921B3277A9C7B0081DEEE /* ViewController.m */; };
@@ -39,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0D0C66277C4B00002F94A1 /* tableShowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableShowModel.h; sourceTree = "<group>"; };
+		9E0D0C67277C4B00002F94A1 /* tableShowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableShowModel.m; sourceTree = "<group>"; };
+		9E0D0C69277C4B0C002F94A1 /* tableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableViewModel.h; sourceTree = "<group>"; };
+		9E0D0C6A277C4B0C002F94A1 /* tableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableViewModel.m; sourceTree = "<group>"; };
+		9E0D0C6C277C581D002F94A1 /* BlendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlendViewController.h; sourceTree = "<group>"; };
+		9E0D0C6D277C581D002F94A1 /* BlendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlendViewController.m; sourceTree = "<group>"; };
+		9E0D0C6E277C581D002F94A1 /* BlendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlendViewController.xib; sourceTree = "<group>"; };
 		9E5921A9277A9C7A0081DEEE /* performanceSample_XY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = performanceSample_XY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5921AC277A9C7A0081DEEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E5921AD277A9C7B0081DEEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0D0C64277C4ACB002F94A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D0C66277C4B00002F94A1 /* tableShowModel.h */,
+				9E0D0C67277C4B00002F94A1 /* tableShowModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E0D0C65277C4AD9002F94A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D0C69277C4B0C002F94A1 /* tableViewModel.h */,
+				9E0D0C6A277C4B0C002F94A1 /* tableViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9E5921A0277A9C7A0081DEEE = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +174,8 @@
 		9E5921E2277B09C30081DEEE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E0D0C65277C4AD9002F94A1 /* ViewModel */,
+				9E0D0C64277C4ACB002F94A1 /* Model */,
 				9E5921E3277B09D50081DEEE /* Controller */,
 			);
 			path = View;
@@ -156,6 +187,9 @@
 				9E5921E4277B0A130081DEEE /* TestCADisplayLinkViewController.h */,
 				9E5921E5277B0A130081DEEE /* TestCADisplayLinkViewController.m */,
 				9E5921E6277B0A130081DEEE /* TestCADisplayLinkViewController.xib */,
+				9E0D0C6C277C581D002F94A1 /* BlendViewController.h */,
+				9E0D0C6D277C581D002F94A1 /* BlendViewController.m */,
+				9E0D0C6E277C581D002F94A1 /* BlendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +299,7 @@
 			files = (
 				9E5921BC277A9C7F0081DEEE /* LaunchScreen.storyboard in Resources */,
 				9E5921B9277A9C7F0081DEEE /* Assets.xcassets in Resources */,
+				9E0D0C70277C581D002F94A1 /* BlendViewController.xib in Resources */,
 				9E5921B7277A9C7B0081DEEE /* Main.storyboard in Resources */,
 				9E5921E8277B0A130081DEEE /* TestCADisplayLinkViewController.xib in Resources */,
 			);
@@ -295,7 +330,10 @@
 				9E5921B4277A9C7B0081DEEE /* ViewController.m in Sources */,
 				9E5921AE277A9C7B0081DEEE /* AppDelegate.m in Sources */,
 				9E5921BF277A9C7F0081DEEE /* main.m in Sources */,
+				9E0D0C6F277C581D002F94A1 /* BlendViewController.m in Sources */,
 				9E5921B1277A9C7B0081DEEE /* SceneDelegate.m in Sources */,
+				9E0D0C68277C4B00002F94A1 /* tableShowModel.m in Sources */,
+				9E0D0C6B277C4B0C002F94A1 /* tableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

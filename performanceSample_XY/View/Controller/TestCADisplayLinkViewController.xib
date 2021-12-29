@@ -27,14 +27,28 @@
                         <constraint firstAttribute="width" constant="240" id="lkB-Mp-h0v"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lT-jo-mbU">
+                    <rect key="frame" x="20" y="44" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="i1w-rF-C5Q"/>
+                        <constraint firstAttribute="height" constant="40" id="xak-iN-RUN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="X"/>
+                    <connections>
+                        <action selector="close:" destination="-1" eventType="touchUpInside" id="iO0-I3-WAh"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="6lT-jo-mbU" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="53n-k0-RPy"/>
                 <constraint firstItem="lJL-oj-Pbn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gZc-uU-3DF"/>
+                <constraint firstItem="6lT-jo-mbU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="qur-Lw-AUx"/>
                 <constraint firstItem="lJL-oj-Pbn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xL9-jt-4ju"/>
             </constraints>
-            <point key="canvasLocation" x="-20" y="84"/>
+            <point key="canvasLocation" x="-371" y="40"/>
         </view>
     </objects>
     <resources>
