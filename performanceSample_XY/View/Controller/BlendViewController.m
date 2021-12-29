@@ -6,70 +6,59 @@
 //
 
 #import "BlendViewController.h"
+#import "FHHFPSIndicator.h"
 
 @interface BlendViewController ()
 
-@property (nonatomic, strong) NSArray *viewArr;
-@property (nonatomic, strong) NSArray *colors;
 
 @end
 
 @implementation BlendViewController
 
+- (void)dealloc
+{
+//    [[FHHFPSIndicator sharedFPSIndicator] hide];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.colors = @[UIColor.blackColor, UIColor.blueColor, UIColor.yellowColor, UIColor.brownColor];
+    
+//    [[FHHFPSIndicator sharedFPSIndicator] show];
+    self.view.backgroundColor = [UIColor brownColor];
 }
 
 - (IBAction)close:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)button1:(UIButton *)sender {
-    if (self.viewArr.count > 0) {
-        [self.viewArr makeObjectsPerformSelector:@selector(removeFromSuperview)];
+- (IBAction)button1:(UIButton *)sender
+{
+    for (int i = 0; i < 1000; i++) {
+        //test1 透明通道-blending
+//        UIView *view = [[UIView alloc] init];
+//        view.frame = CGRectMake(100, 200, 200, 200);
+//        view.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:.3f];
+//        view.opaque = NO;
+//        [self.view addSubview:view];
+        
+        // test2 layer
+//        CALayer *layer = [[CALayer alloc] init];
+//        layer.frame = CGRectMake(100, 200, 200, 200);
+//        layer.backgroundColor = [UIColor grayColor].CGColor;
+//        [self.view.layer addSublayer:layer];
     }
-    NSMutableArray *mArr = [NSMutableArray array];
-    NSTimeInterval time1 = [[NSDate date] timeIntervalSince1970];
-    for (int index = 0; index < 10000; index ++) {
-        int x = arc4random()%self.colors.count;
-        UIView *view = [[UIView alloc] init];
-        view.frame = CGRectMake(100, 100, 100, 100);
-        view.backgroundColor = self.colors[x];
-        if (index != 0) {
-            view.alpha = .1f;
-        }
-        else {
-            view.alpha = 1.f;
-        }
-        [self.view addSubview:view];
-        [mArr addObject:view];
-    }
-    NSTimeInterval time2 = [[NSDate date] timeIntervalSince1970];
-    CGFloat time = time2-time1;
-    NSLog(@"耗时 = %.2lf", time);
-    self.viewArr = mArr;
 }
 
-- (IBAction)button2:(UIButton *)sender {
-    if (self.viewArr.count > 0) {
-        [self.viewArr makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    }
-    NSMutableArray *mArr = [NSMutableArray array];
-    NSTimeInterval time1 = [[NSDate date] timeIntervalSince1970];
-    for (int index = 0; index < 10000; index ++) {
+- (IBAction)button2:(UIButton *)sender
+{
+    for (int i = 0; i < 1000; i++) {
         UIView *view = [[UIView alloc] init];
-        int x = arc4random()%self.colors.count;
-        view.frame = CGRectMake(100, 100, 100, 100);
-        view.backgroundColor = self.colors[x];
+        view.frame = CGRectMake(100, 200, 200, 200);
+        view.backgroundColor = [UIColor grayColor];
+        view.opaque = YES;
         [self.view addSubview:view];
-        [mArr addObject:view];
     }
-    NSTimeInterval time2 = [[NSDate date] timeIntervalSince1970];
-    CGFloat time = time2-time1;
-    NSLog(@"耗时 = %.2lf", time);
-    self.viewArr = mArr;
 }
 
 @end

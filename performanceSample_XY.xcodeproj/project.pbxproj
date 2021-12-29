@@ -11,6 +11,8 @@
 		9E0D0C6B277C4B0C002F94A1 /* tableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C6A277C4B0C002F94A1 /* tableViewModel.m */; };
 		9E0D0C6F277C581D002F94A1 /* BlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C6D277C581D002F94A1 /* BlendViewController.m */; };
 		9E0D0C70277C581D002F94A1 /* BlendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0D0C6E277C581D002F94A1 /* BlendViewController.xib */; };
+		9E0D0C79277C96A4002F94A1 /* UIWindow+FHH.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C75277C96A3002F94A1 /* UIWindow+FHH.m */; };
+		9E0D0C7A277C96A4002F94A1 /* FHHFPSIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D0C78277C96A3002F94A1 /* FHHFPSIndicator.m */; };
 		9E5921AE277A9C7B0081DEEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921AD277A9C7B0081DEEE /* AppDelegate.m */; };
 		9E5921B1277A9C7B0081DEEE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921B0277A9C7B0081DEEE /* SceneDelegate.m */; };
 		9E5921B4277A9C7B0081DEEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5921B3277A9C7B0081DEEE /* ViewController.m */; };
@@ -50,6 +52,10 @@
 		9E0D0C6C277C581D002F94A1 /* BlendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlendViewController.h; sourceTree = "<group>"; };
 		9E0D0C6D277C581D002F94A1 /* BlendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlendViewController.m; sourceTree = "<group>"; };
 		9E0D0C6E277C581D002F94A1 /* BlendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlendViewController.xib; sourceTree = "<group>"; };
+		9E0D0C75277C96A3002F94A1 /* UIWindow+FHH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FHH.m"; sourceTree = "<group>"; };
+		9E0D0C76277C96A3002F94A1 /* FHHFPSIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHHFPSIndicator.h; sourceTree = "<group>"; };
+		9E0D0C77277C96A3002F94A1 /* UIWindow+FHH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FHH.h"; sourceTree = "<group>"; };
+		9E0D0C78277C96A3002F94A1 /* FHHFPSIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHHFPSIndicator.m; sourceTree = "<group>"; };
 		9E5921A9277A9C7A0081DEEE /* performanceSample_XY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = performanceSample_XY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5921AC277A9C7A0081DEEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E5921AD277A9C7B0081DEEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +121,25 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9E0D0C73277C9695002F94A1 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D0C74277C96A3002F94A1 /* FHHFPSIndicator */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		9E0D0C74277C96A3002F94A1 /* FHHFPSIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D0C75277C96A3002F94A1 /* UIWindow+FHH.m */,
+				9E0D0C76277C96A3002F94A1 /* FHHFPSIndicator.h */,
+				9E0D0C77277C96A3002F94A1 /* UIWindow+FHH.h */,
+				9E0D0C78277C96A3002F94A1 /* FHHFPSIndicator.m */,
+			);
+			path = FHHFPSIndicator;
+			sourceTree = "<group>";
+		};
 		9E5921A0277A9C7A0081DEEE = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +163,7 @@
 		9E5921AB277A9C7A0081DEEE /* performanceSample_XY */ = {
 			isa = PBXGroup;
 			children = (
+				9E0D0C73277C9695002F94A1 /* Third */,
 				9E5921E2277B09C30081DEEE /* View */,
 				9E5921AC277A9C7A0081DEEE /* AppDelegate.h */,
 				9E5921AD277A9C7B0081DEEE /* AppDelegate.m */,
@@ -326,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0D0C79277C96A4002F94A1 /* UIWindow+FHH.m in Sources */,
 				9E5921E7277B0A130081DEEE /* TestCADisplayLinkViewController.m in Sources */,
 				9E5921B4277A9C7B0081DEEE /* ViewController.m in Sources */,
 				9E5921AE277A9C7B0081DEEE /* AppDelegate.m in Sources */,
@@ -333,6 +360,7 @@
 				9E0D0C6F277C581D002F94A1 /* BlendViewController.m in Sources */,
 				9E5921B1277A9C7B0081DEEE /* SceneDelegate.m in Sources */,
 				9E0D0C68277C4B00002F94A1 /* tableShowModel.m in Sources */,
+				9E0D0C7A277C96A4002F94A1 /* FHHFPSIndicator.m in Sources */,
 				9E0D0C6B277C4B0C002F94A1 /* tableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,9 +534,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7YNK8EZZR8;
+				DEVELOPMENT_TEAM = M765WKRJ2P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = performanceSample_XY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,6 +545,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,6 +553,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.everimaging.performanceSample-XY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,9 +564,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7YNK8EZZR8;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = performanceSample_XY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -543,6 +575,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +583,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.everimaging.performanceSample-XY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
