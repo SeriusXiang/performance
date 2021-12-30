@@ -6,7 +6,6 @@
 //
 
 #import "BlendViewController.h"
-#import "FHHFPSIndicator.h"
 
 @interface BlendViewController ()
 
@@ -17,14 +16,13 @@
 
 - (void)dealloc
 {
-//    [[FHHFPSIndicator sharedFPSIndicator] hide];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    [[FHHFPSIndicator sharedFPSIndicator] show];
     self.view.backgroundColor = [UIColor brownColor];
 }
 

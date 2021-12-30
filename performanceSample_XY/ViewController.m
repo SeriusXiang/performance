@@ -9,6 +9,8 @@
 #import "tableViewModel.h"
 #import "TestCADisplayLinkViewController.h"
 #import "BlendViewController.h"
+#import "FPSSimulate.h"
+#import "TableViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -19,11 +21,16 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[FPSSimulate shareSimulate] hideFPS];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.viewModel = [[tableViewModel alloc] init];
+    self.viewModel = [[tableViewModel alloc] initWithType:tableTypeMain];
 }
 
 
@@ -36,24 +43,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    tableShowModel *model = self.viewModel.models[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-    cell.textLabel.text = self.viewModel.models[indexPath.row].title;
+    cell.textLabel.text = model.title;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (self.viewModel.models[indexPath.row].index) {
+    tableShowModel *model = self.viewModel.models[indexPath.row];
+    switch (model.index) {
         case 0:
         {
             TestCADisplayLinkViewController *VC = [[TestCADisplayLinkViewController alloc] init];
+            VC.modalPresentationStyle = UIModalPresentationFullScreen;
             [self presentViewController:VC animated:YES completion:nil];
         }
             break;
         case 1:
         {
             BlendViewController *VC = [[BlendViewController alloc] init];
-            [self presentViewController:VC animated:YES completion:nil];
+            VC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:VC animated:YES completion:^{
+                [[FPSSimulate shareSimulate] showFPS];
+            }];
+        }
+            break;
+        case 2:
+        {
+            TableViewController *VC = [[TableViewController alloc] init];
+            VC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:VC animated:YES completion:^{
+                [[FPSSimulate shareSimulate] showFPS];
+            }];
         }
             break;
             
