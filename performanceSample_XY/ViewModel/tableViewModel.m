@@ -2,7 +2,7 @@
 //  tableViewModel.m
 //  performanceSample_XY
 //
-//  Created by fotor on 2021/12/29.
+//  Created by fotor on 2021/12/19.
 //
 
 #import "tableViewModel.h"
@@ -32,7 +32,7 @@
         }
     }
     else if (self.type == tableTypeNormal) {
-        for (int index = 0; index < 100; index++) {
+        for (int index = 0; index < 1000; index++) {
             NormalDataCellModel *model = [[NormalDataCellModel alloc] init];
             model.title = [NSString stringWithFormat:@"title%d", index];
             model.des = [NSString stringWithFormat:@"des%d", index];

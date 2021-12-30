@@ -2,7 +2,7 @@
 //  TableViewController.m
 //  performanceSample_XY
 //
-//  Created by fotor on 2021/12/30.
+//  Created by fotor on 2021/12/20.
 //
 
 #import "TableViewController.h"
@@ -33,8 +33,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-//    NormalDataCellModel *model = self.viewModel.models[indexPath.row];
-//    cell.cellModel = model;
+    NormalDataCellModel *model = self.viewModel.models[indexPath.row];
+    cell.cellModel = model;
     return cell;
 }
 

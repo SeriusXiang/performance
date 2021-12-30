@@ -2,7 +2,7 @@
 //  NormalTableViewCell.m
 //  performanceSample_XY
 //
-//  Created by fotor on 2021/12/30.
+//  Created by fotor on 2021/12/20.
 //
 
 #import "NormalTableViewCell.h"
@@ -33,7 +33,7 @@
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.desLabel];
 //    [self.contentView addSubview:self.urlImageView];
-//    [self.contentView addSubview:self.iconView];
+    [self.contentView addSubview:self.iconView];
 }
 
 - (void)setCellModel:(NormalDataCellModel *)cellModel
@@ -44,12 +44,12 @@
     
 //    NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:cellModel.url]];
 //    self.urlImageView.image = [UIImage imageWithData:imgData];
-//    self.iconView.image = [UIImage imageNamed:cellModel.icon];
-    for (int i = 0; i < 10; i++) {
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:cellModel.icon]];
-        imageView.frame = CGRectMake(120, 10, 120, 120);
-        [self.contentView addSubview:imageView];
-    }
+    self.iconView.image = [UIImage imageNamed:cellModel.icon];
+//    for (int i = 0; i < 10; i++) {
+//        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:cellModel.icon]];
+//        imageView.frame = CGRectMake(120, 10, 120, 120);
+//        [self.contentView addSubview:imageView];
+//    }
 }
 
 
@@ -87,6 +87,13 @@
     if (!_iconView) {
         _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(120, 10, 120, 120)];
         _iconView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        CALayer *layer = _iconView.layer;
+        layer.shadowColor = UIColor.blackColor.CGColor;
+        layer.shadowOpacity = 1.f;
+        layer.shadowRadius = 3.f;
+        layer.shadowOffset = CGSizeMake(1.f, 1.f);
+        layer.shadowPath = CGPathCreateWithRect(CGRectMake(0, 15, 120, 90), NULL);
     }
     return _iconView;
 }
