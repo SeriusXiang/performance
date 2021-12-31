@@ -32,8 +32,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
+//    NormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
     NormalDataCellModel *model = self.viewModel.models[indexPath.row];
+//    cell.cellModel = model;
+//    return cell;
+    
+    NormalTableViewCell *cell = [[NormalTableViewCell alloc] init];
     cell.cellModel = model;
     return cell;
 }

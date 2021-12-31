@@ -19,6 +19,15 @@
 
 @implementation NormalTableViewCell
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initUserInterface];
+    }
+    return self;
+}
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

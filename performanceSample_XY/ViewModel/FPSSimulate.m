@@ -35,7 +35,7 @@ static FPSSimulate *_simulate = nil;
     if (self) {
         self.count = 0;
         self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayHandle:)];
-        self.link.preferredFramesPerSecond = 60;
+//        self.link.preferredFramesPerSecond = 60;
         self.link.paused = YES;
         
         [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
@@ -66,7 +66,7 @@ static FPSSimulate *_simulate = nil;
 
 - (void)showFPS
 {
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(50.f, [[UIApplication sharedApplication] keyWindow].safeAreaInsets.top, 100.f, 30.f)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(50.f, 20, 100.f, 30.f)];
     self.label.font = [UIFont boldSystemFontOfSize:14.f];
     self.label.textColor = [UIColor whiteColor];
     self.label.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.8f];
